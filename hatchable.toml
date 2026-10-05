@@ -1,0 +1,4 @@
+[ai]
+required = true
+pin = "google"
+description = "Google Gemini API key used to generate and optimize resume content."

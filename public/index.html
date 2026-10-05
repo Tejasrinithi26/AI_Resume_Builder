@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ResumeForge AI — AI Resume Builder</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">✦</span> ResumeForge <span class="ai">AI</span></div>
+    <div class="top-actions"><button id="clearBtn" class="ghost">Clear</button><button id="printBtn" class="primary">Download PDF</button></div>
+  </header>
+  <main class="app-shell">
+    <section class="hero">
+      <div><span class="eyebrow">AI-POWERED RESUME BUILDER</span><h1>Build a resume that gets <span>noticed.</span></h1><p>Turn your experience into an ATS-friendly, job-tailored resume with AI.</p></div>
+      <div class="steps"><span class="active">1. Details</span><span>→</span><span>2. AI Enhance</span><span>→</span><span>3. Export</span></div>
+    </section>
+    <div class="workspace">
+      <section class="editor">
+        <div class="card">
+          <div class="section-head"><div><h2>Personal details</h2><p>Start with the basics.</p></div></div>
+          <div class="grid two">
+            <label>Full name<input id="name" placeholder="e.g. Priya Sharma"></label>
+            <label>Target role<input id="role" placeholder="e.g. Software Engineer"></label>
+          </div>
+          <div class="grid two">
+            <label>Email<input id="email" placeholder="you@email.com"></label>
+            <label>Phone<input id="phone" placeholder="+91 98765 43210"></label>
+          </div>
+          <label>Location<input id="location" placeholder="Chennai, India"></label>
+          <label>LinkedIn / Portfolio<input id="linkedin" placeholder="linkedin.com/in/yourname"></label>
+        </div>
+        <div class="card">
+          <div class="section-head"><div><h2>Professional summary</h2><p>Write it yourself or let AI create it.</p></div><button class="ai-btn" data-ai="summary">✦ Generate with AI</button></div>
+          <textarea id="summary" rows="5" placeholder="Briefly describe your experience, strengths and career goals..."></textarea>
+        </div>
+        <div class="card">
+          <div class="section-head"><div><h2>Experience</h2><p>Use measurable achievements where possible.</p></div><button class="ai-btn" data-ai="experience">✦ Improve with AI</button></div>
+          <div id="experienceList"></div>
+          <button id="addExp" class="add-btn">＋ Add experience</button>
+        </div>
+        <div class="card">
+          <div class="section-head"><div><h2>Education</h2><p>Your academic background.</p></div></div>
+          <div id="educationList"></div>
+          <button id="addEdu" class="add-btn">＋ Add education</button>
+        </div>
+        <div class="card">
+          <div class="section-head"><div><h2>Skills</h2><p>Separate skills with commas.</p></div><button class="ai-btn" data-ai="skills">✦ Suggest skills</button></div>
+          <input id="skills" placeholder="Java, Python, SQL, React, Git, AWS">
+        </div>
+        <div class="card">
+          <div class="section-head"><div><h2>Projects</h2><p>Show what you have built.</p></div><button class="ai-btn" data-ai="projects">✦ Improve with AI</button></div>
+          <div id="projectList"></div>
+          <button id="addProject" class="add-btn">＋ Add project</button>
+        </div>
+        <div class="card">
+          <div class="section-head"><div><h2>Target job</h2><p>Paste a job description to tailor your resume.</p></div><button id="tailorBtn" class="ai-btn">✦ Tailor resume</button></div>
+          <textarea id="job" rows="7" placeholder="Paste the job description here..."></textarea>
+        </div>
+      </section>
+      <aside class="preview-panel">
+        <div class="preview-toolbar"><strong>Live Preview</strong><span>ATS-friendly</span></div>
+        <article id="resume" class="resume">
+          <div class="resume-head"><h1 id="pName">Your Name</h1><div id="pRole">Target Role</div><p id="pContact">email • phone • location</p><p id="pLink"></p></div>
+          <div id="pSummarySec"><h3>SUMMARY</h3><p id="pSummary">Your professional summary will appear here.</p></div>
+          <div id="pExpSec"><h3>EXPERIENCE</h3><div id="pExp"></div></div>
+          <div id="pProjectSec"><h3>PROJECTS</h3><div id="pProject"></div></div>
+          <div id="pEduSec"><h3>EDUCATION</h3><div id="pEdu"></div></div>
+          <div id="pSkillsSec"><h3>SKILLS</h3><p id="pSkills"></p></div>
+        </article>
+      </aside>
+    </div>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
