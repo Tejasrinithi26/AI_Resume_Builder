@@ -1,17 +1,101 @@
-# AI Resume Builder
+# 🤖 AI Resume Builder
 
-AI-powered resume builder that helps students and job seekers create ATS-friendly resumes with tailored professional content.
+> An AI-powered resume builder that helps students and job seekers create professional, ATS-friendly resumes with the help of Google Gemini AI.
 
-This folder is a complete Hatchable project. Everything the app needs is in these files: pages, API routes, database migrations, seed data, and the hatchable.toml manifest that declares the services and keys it uses.
+---
 
-## Run your own copy
+## 🚀 Live Demo
 
-1. Go to https://hatchable.com/deploy
-2. Bring this folder as a .zip, or point the importer at a Git repository that contains it
-3. Your copy gets its own database, its own URL, and connects to your own keys
+### 👉 [🌐 Open AI Resume Builder](https://ai-resume-builder-qltj.hatchable.site)
 
-## About Hatchable
+Try the application directly in your browser:
 
-Hatchable is where AI-built apps go live. Connect the AI you already use and it can build, deploy, and run apps like this one for you.
+**https://ai-resume-builder-qltj.hatchable.site**
 
-Built on Hatchable. https://hatchable.com
+---
+
+## 📌 Overview
+
+Finding it difficult to create a professional resume that matches a job description?
+
+**AI Resume Builder** solves this problem by combining an easy-to-use resume builder with AI-powered content optimization.
+
+Users can enter their personal information, education, experience, skills, projects, and target job description. The application uses **Google Gemini AI** to improve resume content and tailor it toward the target role.
+
+The application also provides a live resume preview that helps users create an **ATS-friendly resume**.
+
+---
+
+## ✨ Key Features
+
+### 👤 Personal Information
+- Name
+- Email
+- Phone number
+- Location
+- LinkedIn / Portfolio
+
+### 🎯 Target Job Role
+Enter the job role you are applying for to create a more targeted resume.
+
+### 🧠 AI-Powered Resume Generation
+Generate professional resume content using Google Gemini AI.
+
+### 📝 AI Professional Summary
+Generate a concise and professional career summary based on the candidate's information.
+
+### 💼 AI Experience Enhancement
+Improve existing experience descriptions and convert them into stronger, professional resume bullet points.
+
+### 🚀 AI Project Enhancement
+Improve project descriptions while preserving the candidate's original information.
+
+### 🛠️ AI Skill Suggestions
+Get relevant skill suggestions based on the candidate's profile.
+
+### 🎯 Job Description Tailoring
+Enter a target job description and receive AI-powered suggestions to better align the resume with the job.
+
+### 📊 ATS-Friendly Resume
+The application generates a clean resume structure designed to be easy for Applicant Tracking Systems (ATS) to parse.
+
+### 👀 Live Resume Preview
+See the resume update while entering information.
+
+### 💾 Draft Saving
+Resume data can be saved locally in the browser so users can continue their work later.
+
+### 📄 PDF Output
+The completed resume can be printed or saved as a PDF directly from the browser.
+
+---
+
+## 🏗️ System Architecture
+
+```text
+                 ┌─────────────────────┐
+                 │       User          │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │   Resume Builder    │
+                 │   HTML / CSS / JS   │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │     AI API Layer    │
+                 │      /api/ai        │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │    Google Gemini    │
+                 │         AI          │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ AI-Enhanced Resume  │
+                 └─────────────────────┘
